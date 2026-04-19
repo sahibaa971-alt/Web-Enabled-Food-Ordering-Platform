@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger King - QuickBite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div id="app">
+        <header class="app-header">
+            <div class="logo"><a href="index.html">QuickBite</a></div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#" id="cart-trigger">Cart <span id="cart-count">0</span></a>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <!-- Restaurant Header -->
+            <div class="restaurant-banner">
+                <div class="container">
+                    <div class="banner-content">
+                        <h1>Burger King</h1>
+                        <p class="banner-meta">Burgers • American • $ • 20-30 min</p>
+                        <div class="banner-rating">
+                            <i data-lucide="star" fill="currentColor"></i> 4.5
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Navigation (Sticky) -->
+            <div class="menu-nav-container">
+                <div class="container">
+                    <nav class="menu-nav">
+                        <a href="#popular" class="active">Popular</a>
+                        <a href="#burgers">Burgers</a>
+                        <a href="#sides">Sides</a>
+                        <a href="#drinks">Drinks</a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Menu Sections -->
+            <div class="container menu-container">
+                <section id="popular" class="menu-section">
+                    <h3>Popular Items</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item-card">
+                            <div class="menu-text">
+                                <h4>Whopper Meal</h4>
+                                <p>Flame-grilled patty, sesame bun, with fries and drink.</p>
+                                <span class="price">$9.99</span>
+                            </div>
+                            <div class="menu-action">
+                                <div class="menu-img-placeholder"></div>
+                                <button class="btn btn-primary btn-sm add-btn"
+                                    onclick="addToCart('Whopper Meal', 9.99)">
+                                    <i data-lucide="plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-text">
+                                <h4>Chicken Royale</h4>
+                                <p>Crispy chicken breast with lettuce and mayo.</p>
+                                <span class="price">$7.49</span>
+                            </div>
+                            <div class="menu-action">
+                                <div class="menu-img-placeholder"></div>
+                                <button class="btn btn-primary btn-sm add-btn"
+                                    onclick="addToCart('Chicken Royale', 7.49)">
+                                    <i data-lucide="plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="burgers" class="menu-section">
+                    <h3>Burgers</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item-card">
+                            <div class="menu-text">
+                                <h4>Bacon King</h4>
+                                <p>Two beef patties, topped with smoked bacon and cheese.</p>
+                                <span class="price">$10.49</span>
+                            </div>
+                            <div class="menu-action">
+                                <div class="menu-img-placeholder"></div>
+                                <button class="btn btn-primary btn-sm add-btn" onclick="addToCart('Bacon King', 10.49)">
+                                    <i data-lucide="plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-text">
+                                <h4>Double Cheeseburger</h4>
+                                <p>Two flame-grilled patties with melted cheese.</p>
+                                <span class="price">$5.99</span>
+                            </div>
+                            <div class="menu-action">
+                                <div class="menu-img-placeholder"></div>
+                                <button class="btn btn-primary btn-sm add-btn"
+                                    onclick="addToCart('Double Cheeseburger', 5.99)">
+                                    <i data-lucide="plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sides" class="menu-section">
+                    <h3>Sides</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item-card">
+                            <div class="menu-text">
+                                <h4>Medium Fries</h4>
+                                <p>Classic salted fries.</p>
+                                <span class="price">$2.99</span>
+                            </div>
+                            <div class="menu-action">
+                                <div class="menu-img-placeholder"></div>
+                                <button class="btn btn-primary btn-sm add-btn"
+                                    onclick="addToCart('Medium Fries', 2.99)">
+                                    <i data-lucide="plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                        <div class="menu-item-card">
+                            <div class="menu-text">
+                                <h4>Onion Rings (6pcs)</h4>
+                                <p>Golden crispy onion rings.</p>
+                                <span class="price">$3.49</span>
+                            </div>
+                            <div class="menu-action">
+                                <div class="menu-img-placeholder"></div>
+                                <button class="btn btn-primary btn-sm add-btn" onclick="addToCart('Onion Rings', 3.49)">
+                                    <i data-lucide="plus"></i> Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Cart Drawer (Same as index) -->
+        <div class="cart-overlay" id="cart-overlay"></div>
+        <div class="cart-drawer" id="cart-drawer">
+            <div class="cart-header">
+                <h2>Your Order</h2>
+                <button id="close-cart" class="icon-btn"><i data-lucide="x"></i></button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <div class="empty-cart">Your cart is empty</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <span id="cart-total-price">$0.00</span>
+                </div>
+                <button class="btn btn-primary btn-block">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

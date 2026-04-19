@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBite - Hot. Fresh. Delivered Fast.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/features.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo"><a href="index.html">Quick<span>Bite</span></a></div>
+            <div class="flex items-center">
+                <nav class="flex items-center">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="restaurant.html">Menu</a>
+                    <a href="#">Deals</a>
+                    <!-- Auth Links Placeholder -->
+                    <a href="login.html" class="btn btn-secondary"
+                        style="padding: 8px 16px; margin-left: 20px;">Login</a>
+                </nav>
+                <a href="#" id="cart-trigger" style="margin-left: 20px; position: relative;">
+                    <i data-lucide="shopping-cart"></i>
+                    <span id="cart-count"
+                        style="position: absolute; top: -8px; right: -8px; background: var(--primary); color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 10px;">0</span>
+                </a>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <!-- 1. Hero Section -->
+            <section class="hero-section">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Hot. Fresh. <br>Delivered <span>Fast.</span></h1>
+                        <p>Delicious pizzas made with fresh ingredients, straight to your door.</p>
+                        <div class="hero-buttons">
+                            <a href="restaurant.html" class="btn btn-primary">Order Online</a>
+                            <a href="restaurant.html" class="btn btn-secondary">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Featured Deals -->
+            <section class="section" style="background: var(--surface-alt);">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Today's Best Deals</h2>
+                        <p>Grab a slice of these amazing offers</p>
+                    </div>
+                    <div class="deals-grid">
+                        <!-- Deal 1 -->
+                        <div class="deal-card">
+                            <div class="deal-badge">Buy 1 Get 1 Free</div>
+                            <div class="deal-img">
+                                <img src="assets/images/double_feast.jpg" alt="Pizza">
+                            </div>
+                            <div class="deal-info">
+                                <h3>Double Feast</h3>
+                                <p>Buy any medium pizza and get one free!</p>
+                                <button class="btn btn-primary btn-block">Order Now</button>
+                            </div>
+                        </div>
+                        <!-- Deal 2 -->
+                        <div class="deal-card">
+                            <div class="deal-badge">Family Special</div>
+                            <div class="deal-img">
+                                <img src="assets/images/family_special.jpg" alt="Combo">
+                            </div>
+                            <div class="deal-info">
+                                <h3>Family Box</h3>
+                                <p>2 Large Pizzas, Garlic Bread + Coke.</p>
+                                <button class="btn btn-primary btn-block">Order Now</button>
+                            </div>
+                        </div>
+                        <!-- Deal 3 -->
+                        <div class="deal-card">
+                            <div class="deal-badge">40% OFF</div>
+                            <div class="deal-img">
+                                <img src="assets/images/lunch_saver.jpg" alt="Pepperoni">
+                            </div>
+                            <div class="deal-info">
+                                <h3>Lunch Saver</h3>
+                                <p>Flat 40% off on all pizzas 12PM - 3PM.</p>
+                                <button class="btn btn-primary btn-block">Order Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Menu Highlights -->
+            <section class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Menu Highlights</h2>
+                        <p>Explore our wide range of delicious items</p>
+                    </div>
+
+                    <div class="menu-tabs">
+                        <div class="tab-btn active">All</div>
+                        <div class="tab-btn">Pizzas</div>
+                        <div class="tab-btn">Sides</div>
+                        <div class="tab-btn">Desserts</div>
+                    </div>
+
+                    <div class="highlights-grid">
+                        <div class="highlight-card">
+                            <div class="h-img-placeholder">
+                                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=400"
+                                    alt="Item">
+                            </div>
+                            <h4>Pepperoni Blast</h4>
+                            <p class="price">INR 1200</p>
+                            <button class="btn btn-secondary btn-block">Add to Cart</button>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="h-img-placeholder">
+                                <img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?q=80&w=400"
+                                    alt="Item">
+                            </div>
+                            <h4>Veggie Supreme</h4>
+                            <p class="price">INR 1499</p>
+                            <button class="btn btn-secondary btn-block">Add to Cart</button>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="h-img-placeholder">
+                                <img src="assets/images/cheese_burst.jpg" alt="Item">
+                            </div>
+                            <h4>Cheese Burst</h4>
+                            <p class="price">INR 800</p>
+                            <button class="btn btn-secondary btn-block">Add to Cart</button>
+                        </div>
+                        <div class="highlight-card">
+                            <div class="h-img-placeholder">
+                                <img src="assets/images/bbq_chicken.jpg" alt="Item">
+                            </div>
+                            <h4>BBQ Chicken</h4>
+                            <p class="price">INR 1440</p>
+                            <button class="btn btn-secondary btn-block">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="text-center" style="margin-top: 40px;">
+                        <a href="restaurant.html" class="btn btn-primary">View Full Menu</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Why Choose Us -->
+            <section class="section" style="background: var(--surface-alt);">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Why QuickBite?</h2>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i data-lucide="rocket"></i></div>
+                            <h4>Fast Delivery</h4>
+                            <p>Hot food in 30 mins or free.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i data-lucide="leaf"></i></div>
+                            <h4>Fresh Ingredients</h4>
+                            <p>Farm fresh veggies daily.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i data-lucide="chef-hat"></i></div>
+                            <h4>Expert Chefs</h4>
+                            <p>Hand-tossed with love.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i data-lucide="award"></i></div>
+                            <h4>Trusted Brand</h4>
+                            <p>10k+ happy customers.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. How It Works -->
+            <section class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>How It Works</h2>
+                    </div>
+                    <div class="steps-row">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <h4>Choose</h4>
+                            <p>Select your favorite pizza.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <h4>Customize</h4>
+                            <p>Add toppings & sides.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <h4>Order</h4>
+                            <p>Secure payment checkout.</p>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-number">4</div>
+                            <h4>Enjoy</h4>
+                            <p>Fast delivery to your door.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. App Promotion -->
+            <section class="container">
+                <div class="app-section">
+                    <div class="app-container">
+                        <div class="app-text">
+                            <h2>Get the App</h2>
+                            <p>Order faster, get exclusive deals, and track your food in real-time with the QuickBite
+                                App.</p>
+                            <div class="store-buttons">
+                                <a href="#" class="store-btn">
+                                    <i data-lucide="apple"></i> App Store
+                                </a>
+                                <a href="#" class="store-btn">
+                                    <i data-lucide="play-circle"></i> Google Play
+                                </a>
+                            </div>
+                        </div>
+                        <div class="app-image">
+                            <!-- Placeholder -->
+                            <div style="font-size: 100px;">📱</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4>QuickBite</h4>
+                        <p>Best Pizza in Town.</p>
+                        <div class="flex gap-md" style="margin-top: 20px;">
+                            <i data-lucide="facebook"></i>
+                            <i data-lucide="instagram"></i>
+                            <i data-lucide="twitter"></i>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Menu</h4>
+                        <ul>
+                            <li><a href="#">Pizzas</a></li>
+                            <li><a href="#">Sides</a></li>
+                            <li><a href="#">Drinks</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Terms</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact chatbot / Manager</h4>
+                        <ul>
+                            <li>support quickbitefood12@gmail.com</li>
+                            <li>Lucknow Uttar Pradesh-411039
+                            <li>Concept By SURAJ MALL </li> Designed By VARUN ADITYA </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    &copy; 2026 QuickBite Inc. All rights reserved.
+                </div>
+            </div>
+        </footer>
+
+        <!-- Cart Drawer (Same as always) -->
+        <div class="cart-overlay" id="cart-overlay"></div>
+        <div class="cart-drawer" id="cart-drawer">
+            <div class="cart-header">
+                <h2>Your Order</h2>
+                <button id="close-cart" class="icon-btn"><i data-lucide="x"></i></button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <div class="empty-cart">Your cart is empty</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <span id="cart-total-price">$0.00</span>
+                </div>
+                <button class="btn btn-primary btn-block">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <h2>Delivery Details</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label>Address</label>
+                    <textarea id="address" required placeholder="Street, landmark..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" id="city" required value="Gorakhpur">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="phone" required placeholder="+91...">
+                </div>
+                <div class="form-group">
+                    <label>Cooking Instructions (Optional)</label>
+                    <input type="text" id="instructions" placeholder="e.g. Less spicy, Extra cheese">
+                </div>
+                <div class="checkout-summary">
+                    <strong>Total to Pay: <span id="checkout-total-display">$0.00</span></strong>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-secondary" id="cancel-checkout">Cancel</button>
+                    <button type="submit" class="btn-primary">Confirm Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <div id="chat-btn" class="chat-fab">💬</div>
+    <div id="chat-widget" class="chat-widget" style="display: none;">
+        <div class="chat-header">
+            <span>Support Agent</span>
+            <button id="close-chat">×</button>
+        </div>
+        <div id="chat-body" class="chat-body">
+            <div class="chat-msg bot">Hi! I'm QuickBot. How can I help you?</div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button id="chat-send">➤</button>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        lucide.createIcons();
+        async function submitReview(e) {
+            e.preventDefault();
+            const data = {
+                user_name: document.getElementById('review-name').value,
+                rating: document.getElementById('review-rating').value,
+                comment: document.getElementById('review-comment').value
+            };
+
+            // Use ApiService instead of fetch
+            const result = await ApiService.submitReview(data);
+
+            if (result.success) {
+                alert('Review Submitted!');
+                location.reload();
+            } else {
+                alert('Error: ' + result.message);
+            }
+        }
+    </script>
+</body>
+
+</html>

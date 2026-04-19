@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking - QuickBite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div id="app">
+        <header class="app-header">
+            <div class="logo"><a href="index.html">QuickBite</a></div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#" id="cart-trigger">Cart <span id="cart-count">0</span></a>
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <div class="container tracking-container">
+                <div class="tracking-card">
+                    <div class="tracking-header">
+                        <h2>Order #2891</h2>
+                        <span class="status-badge">Preparing</span>
+                    </div>
+                    <div class="tracking-map">
+                        <div class="map-placeholder">
+                            <i data-lucide="map" class="map-icon"></i>
+                            <p>Map View</p>
+                        </div>
+                    </div>
+                    <div class="tracking-timeline">
+                        <div class="timeline-item completed">
+                            <div class="timeline-icon"><i data-lucide="check"></i></div>
+                            <div class="timeline-content">
+                                <h4>Order Placed</h4>
+                                <p>5:30 PM</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item active">
+                            <div class="timeline-icon"><i data-lucide="chef-hat"></i></div>
+                            <div class="timeline-content">
+                                <h4>Preparing</h4>
+                                <p>Resturant is preparing your food</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon"><i data-lucide="bike"></i></div>
+                            <div class="timeline-content">
+                                <h4>Out for Delivery</h4>
+                                <p>Estimated 6:15 PM</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon"><i data-lucide="home"></i></div>
+                            <div class="timeline-content">
+                                <h4>Delivered</h4>
+                                <p>Enjoy your meal!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Cart Drawer (Same as index) -->
+        <div class="cart-overlay" id="cart-overlay"></div>
+        <div class="cart-drawer" id="cart-drawer">
+            <div class="cart-header">
+                <h2>Your Order</h2>
+                <button id="close-cart" class="icon-btn"><i data-lucide="x"></i></button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <div class="empty-cart">Your cart is empty</div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total</span>
+                    <span id="cart-total-price">$0.00</span>
+                </div>
+                <button class="btn btn-primary btn-block">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
